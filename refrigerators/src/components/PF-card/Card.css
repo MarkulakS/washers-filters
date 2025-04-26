@@ -1,0 +1,119 @@
+.Card {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 15px 15px;
+    width: 20vw;
+}
+h2, b, sup, sub {
+    font-weight: 600;
+}
+
+.image {
+    margin: auto;
+    width: 216px;
+    height: 216px;
+    transform: scale(0.7);
+}
+
+.product-info {
+    margin: 0 1vw;
+ }
+
+.title-name {
+    font-size: .9rem;
+    margin-top: -20px;
+}
+
+.product-desc {
+    font-size: .6rem;
+    color: #aaa;
+    margin: 0;
+    margin-top: 20px;
+    line-height: 12px;
+}
+.product-desc b {
+    color: #000;
+}
+.product-desc .energy-class {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: -10px;
+}
+.product-desc .energy-class .energy-class-rate {
+    margin-left: 15px;
+    padding-left: 5px;
+    width: 50px;
+    background-color: #009933;
+    color: #fff;
+    font-weight: 600;
+    font-size: .8rem;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+}
+.product-desc .energy-class .energy-class-rate::after {
+    content: '';
+    position: absolute;
+    width: 50%; height: 100%;
+    top: -2px; right: -35%;
+    background-color: #fff;
+    transform-origin: 50% 0;
+    transform: rotate(45deg);
+    z-index: 1;
+}
+.product-desc .energy-class .energy-class-rate::before {
+    content: '';
+    position: absolute;
+    width: 50%; height: 100%;
+    top: 20px; right: -25%;
+    background-color: #fff;
+    transform-origin: 50% 0;
+    transform: rotate(135deg);
+    z-index: 1;
+}
+
+.offer .off-date {
+    font-size: 0.6rem;
+    color: #aaa;
+    margin-bottom: -5px;
+}
+.offer .price, .price>p {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    margin: 0;
+}
+.offer .price .additional-price-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+    height: 1.5rem;
+    font-size: .8rem;
+    margin-left: 2px;
+}
+.offer .installments, .installments>p {
+    font-size: .8rem;
+    margin-top: 5px;
+    color: #666666;
+}
+
+.btn-choose {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-choose button {
+    background-color: #000099;
+    border-radius: 15px;
+    border: 1px solid #000099;
+    letter-spacing: 2px;
+    color: #fff;
+    font-size: .6rem;
+    width: 40%;
+    padding: 7px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
