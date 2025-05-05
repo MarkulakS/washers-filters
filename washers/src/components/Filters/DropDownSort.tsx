@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import './DropDownSort.css';
 
 type SortProps = {
     sorting: string[];
