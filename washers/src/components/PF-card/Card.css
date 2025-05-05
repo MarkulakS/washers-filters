@@ -56,6 +56,15 @@ h2, b, sup, sub {
     overflow: hidden;
     z-index: 0;
 }
+.green-A {
+    background-color: #009933;
+}
+.yellow-D {
+    background-color: #ffcc00;
+}
+.orang-E {
+    background-color: #e68a00;
+}
 .product-desc .energy-class .energy-class-rate::after {
     content: '';
     position: absolute;

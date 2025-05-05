@@ -16,17 +16,15 @@ function Search(props: any) {
                 return el.item.name.toLowerCase().includes(props.inputText);
             }
             else {
-                cardClass?.classList.remove("search-bar-toggle");
                 return el.item.name.toLowerCase().includes(props.inputText);
             }
-            
         }
     })
 
     return (
         <div>
             {searchFilter.map((el) => (
-                    <p className="search-items" key={el.position}>
+                    <p id="searchItem" className="search-items" key={el.position}>
                         <a href={el.item.url}>{el.item.name}</a>
                     </p>
             ))}

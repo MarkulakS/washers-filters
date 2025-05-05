@@ -7,6 +7,9 @@ import * as Laundry from "./interfaces/IDataLaundry";
 
 function App() {
   const jsonData = cardItems as Laundry.DataLaundry;
+
+  const step = 6;
+  let actualList: any;
   
   const startSortingByRating = (category: string) => {
     const sortCat = () => {
@@ -43,15 +46,16 @@ function App() {
       }
       return 0;
     });
+    actualList = newItems;
     return newItems;
   }
 
   const firstList = startSortingByRating("Popularność");
 
-  const [item, setItems] = useState(firstList);
+  const [item, setItems] = useState([...firstList].slice(0, step));
 
   const filterBySort = (category: string) => {
-    setItems(startSortingByRating(category));
+    setItems(startSortingByRating(category).slice(0, step));
   };
 
   const filterByFeatures = (category: string) => {
@@ -68,7 +72,8 @@ function App() {
         return feat.listFeatures;
       else return 0;
     });
-    setItems(newItems);
+    actualList=newItems;
+    setItems(newItems.slice(0, step));
   };
 
   const filterByEnergy = (category: string) => {
@@ -84,7 +89,8 @@ function App() {
         return energy.energyList;
       else return 0;
     });
-    setItems(newItems);
+    actualList=newItems;
+    setItems(newItems.slice(0, step));
   };
 
   const filterByCapacity = (category: string) => {
@@ -100,8 +106,13 @@ function App() {
         return capacity.capacityList;
       else return 0;
     });
+    actualList=newItems;
     setItems(newItems);
   };
+
+  const showMore = () => {
+    setItems([...item, ...actualList.slice(item.length, item.length + step)]);
+  }
 
   return (
     <div className="App">
@@ -127,6 +138,13 @@ function App() {
                 cardEl={el} />
             </div>
           ))}
+        </div>
+        <div className="show-more">
+          {item.length % 6 === 0 ?
+            <a onClick={() => showMore()}>Pokaż więcej
+              <div className="arrow"></div>
+            </a>
+          : null }
         </div>
       </div>
     </div>

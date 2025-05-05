@@ -2,6 +2,7 @@
   width: 100%;
   margin: auto;
   margin-top: 0;
+  margin-bottom: 50px;
 }
 
 .header-title, .header-title>h2 {
@@ -17,6 +18,7 @@
 
 .container {
   width: 70vw;
+  min-width: 1000px;
   margin: auto;
 }
 
@@ -47,3 +49,34 @@
   margin-bottom: 30px;
 }
 
+.container .show-more {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+
+.container .show-more a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto 5px;
+  color: blue;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.container .show-more .arrow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  margin-left: 10px;
+  box-sizing: border-box;
+  height: 5px;
+  width: 5px;
+  border-style: solid;
+  border-color: blue;
+  border-width: 0px 2px 2px 0px;
+  transform: rotate(45deg);
+  transition: border-width 150ms ease-in-out
+}

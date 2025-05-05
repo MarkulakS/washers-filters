@@ -35,7 +35,8 @@ const Filters = ({
     const findId = (el: string) => el === selectSort;
     const id = array.findIndex(findId);
 
-    array.splice(id, 1);
+    if(id > 0) 
+      array.splice(id, 1);
 
     return array;
   };
@@ -56,8 +57,9 @@ const Filters = ({
 
     const findId = (el: string) => el === selectFeat;
     const id = array.findIndex(findId);
-
-    array.splice(id, 1);
+    
+    if(id > 0) 
+      array.splice(id, 1);
 
     return array;
   };
@@ -80,7 +82,8 @@ const Filters = ({
     const findId = (el: string) => el === selectEnergy;
     const id = array.findIndex(findId);
 
-    array.splice(id, 1);
+    if(id > 0) 
+      array.splice(id, 1);
 
     return array;
   };
@@ -103,7 +106,8 @@ const Filters = ({
     const findId = (el: string) => el === selectCapacity;
     const id = array.findIndex(findId);
 
-    array.splice(id, 1);
+    if(id > 0) 
+      array.splice(id, 1);
 
     return array;
   };
@@ -145,10 +149,11 @@ const Filters = ({
   //inputText 
   let inputHandler = (e: any) => {
     var cardClass = document.getElementById("search-list");
-    if(e.target.value === "") 
-        cardClass?.classList.remove("search-bar-toggle");
-    else 
-        cardClass?.classList.add("search-bar-toggle");
+    var searchComp = document.getElementById("searchItem");
+
+    if(searchComp !== null) {
+      cardClass?.classList.remove("search-bar-toggle");
+    }
 
     var lowerCase = e.target.value.toLowerCase();
 

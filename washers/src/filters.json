@@ -6,8 +6,8 @@
     ["AI Energy", "AI Home", "AI Wash", "ecobubble", "Hygiene Steam", "On Device Bixby", "SpaceMax", "Large Capacity", "Super Speed"],
 
     "energyElements" :
-    ["A", "B", "C", "D", "E"],
+    ["A", "D", "E"],
 
     "capacityElements" :
-    ["8", "9", "10", "11", "12", "18"]
+    ["8", "9", "11", "18"]
 }

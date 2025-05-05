@@ -34,6 +34,7 @@ export const Card: React.FC<LaundryProps> = ({cardEl}) => {
   }
 
   return (
+    
     <div className="Card">
         <img
             className="product-image"
@@ -54,7 +55,7 @@ export const Card: React.FC<LaundryProps> = ({cardEl}) => {
                 </p>
                 <div className="energy-class">
                     <p>Klasa energetyczna</p>
-                    <div className="energy-class-rate">
+                    <div id="energyClass" className="energy-class-rate">
                         {cardEl.item.energyClass}
                     </div>
                 </div>
