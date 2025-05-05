@@ -1,2 +1,2 @@
-# fridge-filters
+# washers-filters
 FE dev recruitment task
